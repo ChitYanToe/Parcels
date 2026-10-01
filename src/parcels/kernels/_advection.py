@@ -301,7 +301,7 @@ def MRAdvectionRK4_3D(particles, fieldset):  # pragma: no cover
     wp3 = particles.wp + 0.5 * a_depth2 * particles.dt
 
     # read in velocity at location of particle
-    (uf3, vf3, wf3) = fieldset.UVW[time2, particles.z, lat2, lon2]
+    (uf3, vf3, wf3) = fieldset.UVW[time2, depth2, lat2, lon2]
 
     # calculate time derivative of fluid field
     (uf_tp3, vf_tp3, wf_tp3) = fieldset.UVW[particles.t + particles.dt, depth2, lat2, lon2]
